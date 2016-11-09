@@ -19,7 +19,7 @@ class LowerQuality(object):
 		else:
 			print "Error: unknown file type"
 			return
-		song.export("lower_"+self.song_name, format=self.file_type, bitrate=target_bitrate)
+		song.export(target_bitrate+"_"+self.song_name, format=self.file_type, bitrate=target_bitrate)
 
 if __name__ == "__main__":
 	if len(sys.argv) < 2:
