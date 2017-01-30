@@ -35,7 +35,7 @@ y = np.reshape(y, (-1, 1))
 #split the data 70/30
 split = np.round(X.size * .6).astype(int)
 
-# we need to split so that we know how to reassemble 
+# we need to split so that we know how to reassemble
 X_train = X[0:split]
 X_test = X[split:]
 y_train = y[0:split]
