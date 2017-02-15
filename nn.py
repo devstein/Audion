@@ -36,7 +36,6 @@ model.add(Dense(1152, init='normal', activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 
 
-print(train_X)
 # Fit
 model.fit(train_X, train_Y, nb_epoch=5, batch_size=32)
 
