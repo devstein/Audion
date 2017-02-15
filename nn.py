@@ -30,12 +30,13 @@ test_Y = data_X[split:]
 # Model
 model = Sequential()
 
-model.add(Dense(output_dim=1152, input_dim=1152))
-model.add(Activation("relu"))
+model.add(Dense(1152, input_dim=1152, init='normal', activation='relu'))
+model.add(Dense(1152, init='normal', activation='softmax'))
 
-model.compile(loss='sparse_categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 
 
+print(train_X)
 # Fit
 model.fit(train_X, train_Y, nb_epoch=5, batch_size=32)
 
