@@ -37,8 +37,8 @@ model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accura
 
 
 # Fit
-model.fit(train_X, train_Y, nb_epoch=5, batch_size=32)
+model.fit(train_X, train_Y, nb_epoch=5, batch_size=20)
 
 
 # Test
-loss_and_metrics = model.evaluate(test_X, test_Y, batch_size=32)
+loss_and_metrics = model.evaluate(test_X, test_Y, batch_size=20)
